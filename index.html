@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding FAQs</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3ced1;
+  color: #b83d73;
+  font-family: Georgia, serif;
+}
+
+.faq {
+  width: 100%;
+  padding: 25px;
+}
+
+.faq-item {
+  border-bottom: 2px solid #b83d73;
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 40px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b83d73;
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 4vw, 38px);
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+.icon {
+  font-family: Arial, sans-serif;
+  font-size: 42px;
+  margin-left: 15px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 45px 65px;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-size: clamp(17px, 3vw, 38px);
+  line-height: 1.55;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+@media(max-width:600px) {
+  .faq {
+    padding: 12px;
+  }
+
+  .faq-question {
+    padding: 28px 15px;
+  }
+
+  .faq-answer {
+    padding: 5px 15px 35px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="faq">
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>HOW TO RSVP</span>
+      <span class="icon">−</span>
+    </button>
+    <div class="faq-answer">
+      Please fill up the RSVP form or you may
+      send us a personal message on our
+      Facebook accounts. Please respond as
+      this would greatly help us in allocation
+      of seats on the event.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>WHERE CAN I PARK?</span>
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Parking is available at the designated
+      parking area of the venue. Please follow
+      the parking signs and instructions
+      upon arrival.
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.faq-question')
+.forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const isOpen = item.classList.toggle('open');
+
+    button.querySelector('.icon').textContent =
+      isOpen ? '−' : '+';
+  });
+});
+</script>
+
+</body>
+</html>
