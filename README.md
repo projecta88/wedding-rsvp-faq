@@ -33,6 +33,7 @@ Use **Cloudflare Pages Git integration** for this full-stack project. Cloudflare
 
 ## Security note
 Full-name-only lookup is convenient but not proof of identity: anyone who knows an invitee's full name may try to look up that invitation. Before using this for a private event, consider adding a per-invitation PIN or unique invitation code.
+Deployment refresh
 
 ## Mobile workflow
 You can create a GitHub repository and upload files using the GitHub mobile website, but configuring D1 migrations and Pages bindings is easier on a desktop. Do not enter real guest data until the backend is deployed and tested.
