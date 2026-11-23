@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+:root{
+ --page-bg:#f7f3eb;--card-bg:#fffdf9;--section-bg:#f3eee5;--text:#39352f;--muted:#82796d;
+ --accent:#9a8060;--button-bg:#75634f;--button-text:#fffdf9;--border:#e5ded2;
+ --heading-font:"Cormorant Garamond",Georgia,serif;--body-font:Montserrat,Arial,sans-serif;
+ --heading-size:clamp(2.4rem,8vw,3.5rem);--body-size:15px;
+}
+*{box-sizing:border-box} body{margin:0;background:var(--page-bg);color:var(--text);font-family:var(--body-font);font-size:var(--body-size);line-height:1.65}
+.page{min-height:100vh;display:grid;place-items:center;padding:28px 16px}
+.card{width:min(100%,560px);background:var(--card-bg);border:1px solid var(--border);padding:clamp(26px,6vw,54px);box-shadow:0 18px 55px #463b2b12}
+.eyebrow{text-align:center;letter-spacing:.22em;font-size:10px;color:var(--accent);font-weight:600}
+h1{text-align:center;font:500 var(--heading-size)/1.05 var(--heading-font);margin:20px 0 12px;color:var(--text)}
+.intro{text-align:center;color:var(--muted);max-width:390px;margin:0 auto 25px}
+.rule{height:1px;background:var(--border);margin:28px 0}
+label,legend{display:block;font-size:12px;font-weight:600;letter-spacing:.04em;margin-bottom:8px}
+input:not([type=radio]){width:100%;padding:14px;border:1px solid var(--border);background:var(--section-bg);color:var(--text);font:inherit;border-radius:2px;margin-bottom:16px}
+button{width:100%;padding:14px 18px;border:0;background:var(--button-bg);color:var(--button-text);font:600 11px var(--body-font);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:2px}
+button:disabled{opacity:.6;cursor:wait} fieldset{border:0;padding:0;margin:24px 0}
+.choice{display:flex;align-items:center;gap:10px;padding:12px;background:var(--section-bg);margin:8px 0;font-weight:400;letter-spacing:0}
+.choice input{accent-color:var(--accent)} .welcome{text-align:center;font:500 1.8rem var(--heading-font)}
+.muted,.hint{text-align:center;color:var(--muted);font-size:12px}.hint{text-align:left;margin-top:-4px}
+#message{min-height:24px;text-align:center;color:var(--accent);font-size:13px;margin:15px 0}
+.footer{text-align:center;color:var(--muted);font:italic 1.2rem var(--heading-font);margin-top:28px}
+[hidden]{display:none!important}
+@media(max-width:420px){.page{padding:12px}.card{padding:25px 20px}}

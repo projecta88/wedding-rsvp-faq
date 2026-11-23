@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f3eb"><title>Wedding RSVP</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="page">
+  <section class="card" id="rsvpCard">
+    <p class="eyebrow" id="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
+    <h1 id="heading">You are warmly invited</h1>
+    <p class="intro" id="intro">Please let us know if you can celebrate with us.</p>
+    <div class="rule"></div>
+    <form id="lookupForm">
+      <label for="guestName" id="guestLabel">Full name</label>
+      <input id="guestName" name="guestName" autocomplete="name" required placeholder="Enter your invited full name">
+      <button type="submit" id="lookupButton">Find my invitation</button>
+    </form>
+    <section id="invitation" hidden>
+      <p id="welcomeText" class="welcome"></p>
+      <p id="seatText" class="muted"></p>
+      <form id="rsvpForm">
+        <fieldset><legend id="attendanceLabel">Will you attend?</legend>
+          <label class="choice"><input type="radio" name="attendance" value="yes" required> <span id="yesText">Joyfully accepts</span></label>
+          <label class="choice"><input type="radio" name="attendance" value="no"> <span id="noText">Regretfully declines</span></label>
+        </fieldset>
+        <div id="companionsWrap" hidden>
+          <label id="companionsLabel" for="companions">Names of your companions</label>
+          <p class="hint" id="companionsHint">Enter one companion name for each additional seat.</p>
+          <div id="companionInputs"></div>
+        </div>
+        <button type="submit" id="submitButton">Confirm attendance</button>
+      </form>
+    </section>
+    <p id="message" role="status" aria-live="polite"></p>
+    <p class="footer" id="footerText">We look forward to celebrating with you.</p>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body></html>
